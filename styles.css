@@ -1,5 +1,7 @@
 
 
+
+
 /* Variabes */  
 $orange: #ffa600;
 $grey:#f3f3f3;
@@ -21,7 +23,7 @@ border-radius: $radius;
 }
 
 body {
-background: base-color;
+background:$base-color;
 font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 height:100%;
 }
@@ -45,10 +47,10 @@ h1, h2, h3 {
 }
 
 button{
-include corners (5px);
-background:base-color;
-color:rgb(149, 39, 39);
-border: solid 2px rgb(181, 173, 53);
+@include corners (5px);
+background:$base-color;
+color:$white;
+border: solid 1px $white;
 text-decoration:none;
 cursor:pointer;
 font-size:1.2em;
@@ -56,9 +58,9 @@ padding:18px 10px;
 width:180px;
 margin: 10px;
  outline: none;
-  :hover{
-	include transition;
-	background:white;
-	border: solid 1px white;
-	color:base-color;
+  &:hover{
+	@include transition;
+	background:$white;
+	border: solid 1px $white;
+	color:$base-color;
 	}
